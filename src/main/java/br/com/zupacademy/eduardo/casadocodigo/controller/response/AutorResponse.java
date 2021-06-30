@@ -1,21 +1,22 @@
-package br.com.zupacademy.eduardo.controller.response;
+package br.com.zupacademy.eduardo.casadocodigo.controller.response;
 
 import java.time.LocalDateTime;
 
-import br.com.zupacademy.eduardo.modelo.Autor;
+import br.com.zupacademy.eduardo.casadocodigo.modelo.Autor;
 
 public class AutorResponse {
 
 	private Long id;
 	private String nome;
-	private String mensagem;
+	private String email;
 	private String descricao;
 	private LocalDateTime criadoEm;
 
 	public AutorResponse(Autor autor) {
 		this.id = autor.getId();
+		this.nome = autor.getNome();
 		this.descricao = autor.getDescricao();
-		this.mensagem = autor.getEmail();
+		this.email = autor.getEmail();
 		this.criadoEm = autor.getCriadoEm();
 	}
 
@@ -27,8 +28,8 @@ public class AutorResponse {
 		return nome;
 	}
 
-	public String getMensagem() {
-		return mensagem;
+	public String getEmail() {
+		return email;
 	}
 
 	public LocalDateTime getCriadoEm() {

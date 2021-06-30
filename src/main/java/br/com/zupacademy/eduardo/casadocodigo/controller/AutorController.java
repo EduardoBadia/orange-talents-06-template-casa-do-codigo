@@ -1,4 +1,4 @@
-package br.com.zupacademy.eduardo.controller;
+package br.com.zupacademy.eduardo.casadocodigo.controller;
 
 import java.net.URI;
 
@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import br.com.zupacademy.eduardo.controller.request.AutorRequest;
-import br.com.zupacademy.eduardo.controller.response.AutorResponse;
-import br.com.zupacademy.eduardo.modelo.Autor;
-import br.com.zupacademy.eduardo.repository.AutorRepository;
+import br.com.zupacademy.eduardo.casadocodigo.controller.request.AutorRequest;
+import br.com.zupacademy.eduardo.casadocodigo.controller.response.AutorResponse;
+import br.com.zupacademy.eduardo.casadocodigo.modelo.Autor;
+import br.com.zupacademy.eduardo.casadocodigo.repository.AutorRepository;
 
 @RestController
 @RequestMapping("/api/autores")
