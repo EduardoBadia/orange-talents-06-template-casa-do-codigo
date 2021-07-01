@@ -11,8 +11,6 @@ import br.com.zupacademy.eduardo.casadocodigo.modelo.Autor;
 
 public class AutorRequest {
 
-	private Long id;
-
 	@NotNull
 	@NotBlank
 	private String nome;
@@ -32,15 +30,11 @@ public class AutorRequest {
 	public AutorRequest() {
 	}
 
-	public AutorRequest(Autor autor) {
-		this.id = autor.getId();
-		this.nome = autor.getNome();
-		this.descricao = autor.getDescricao();
-		this.email = autor.getEmail();
-	}
-
-	public Long getId() {
-		return id;
+	public AutorRequest(String nome, String email, String descricao) {
+		
+		this.nome = nome;
+		this.descricao = email;
+		this.email = descricao;
 	}
 
 	public String getNome() {
@@ -57,5 +51,10 @@ public class AutorRequest {
 
 	public String getEmail() {
 		return email;
+	}
+	
+	public Autor toModel()
+	{
+		return new Autor(nome, descricao, email);
 	}
 }
