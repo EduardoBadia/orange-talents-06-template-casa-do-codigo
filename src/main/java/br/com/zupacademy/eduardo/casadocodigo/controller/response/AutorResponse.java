@@ -6,6 +6,7 @@ import br.com.zupacademy.eduardo.casadocodigo.modelo.Autor;
 
 public class AutorResponse {
 
+	
 	private Long id;
 	private String nome;
 	private String email;
@@ -13,6 +14,7 @@ public class AutorResponse {
 	private LocalDateTime criadoEm;
 
 	public AutorResponse(Autor autor) {
+		
 		this.id = autor.getId();
 		this.nome = autor.getNome();
 		this.descricao = autor.getDescricao();
