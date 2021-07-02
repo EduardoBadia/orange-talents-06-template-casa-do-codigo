@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import br.com.zupacademy.eduardo.casadocodigo.config.anotacao.EmailUnico;
@@ -12,19 +13,21 @@ import br.com.zupacademy.eduardo.casadocodigo.modelo.Autor;
 
 public class AutorRequest {
 
+	@NotNull
 	@NotBlank
 	private String nome;
 
+	@NotNull
 	@NotBlank
 	@Email
-	@EmailUnico(message = "O email precisa ser único no sistema")
 	private String email;
 
+	@NotNull
 	@NotBlank
 	@Size(max = 400)
 	private String descricao;
 
-	private LocalDateTime dataCriacao;
+	private LocalDateTime criadoEm;
 
 	public AutorRequest() {
 	}
@@ -60,8 +63,8 @@ public class AutorRequest {
 		return nome;
 	}
 
-	public LocalDateTime getDataCriacao() {
-		return dataCriacao;
+	public LocalDateTime getCriadoEm() {
+		return criadoEm;
 	}
 
 	public String getDescricao() {

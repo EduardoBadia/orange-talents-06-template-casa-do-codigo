@@ -6,11 +6,13 @@ import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import br.com.zupacademy.eduardo.casadocodigo.config.anotacao.EmailUnico;
 import br.com.zupacademy.eduardo.casadocodigo.modelo.Autor;
 import br.com.zupacademy.eduardo.casadocodigo.repository.AutorRepository;
 
+@Component
 public class EmailUnicoValidador implements ConstraintValidator<EmailUnico, String>{
 	
 	@Autowired

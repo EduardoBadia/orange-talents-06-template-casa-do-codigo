@@ -2,13 +2,13 @@ package br.com.zupacademy.eduardo.casadocodigo.modelo;
 
 import java.time.LocalDateTime;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -22,15 +22,18 @@ public class Autor {
 	 @GeneratedValue(strategy = GenerationType.IDENTITY)
 	 private Long id;
 	 
+	 @NotNull
 	 @NotBlank
 	 private String nome; 
 	 
+	 @NotNull
 	 @NotBlank
 	 private String descricao;
 	 
+	 @NotNull
 	 @NotBlank  
 	 @Email
-	 @EmailUnico(message = "O email precisa ser único no sistema")
+	 @EmailUnico
 	 private String email;
 	 
 	 @CreationTimestamp
@@ -40,7 +43,7 @@ public class Autor {
 	 public Autor() {}
 
 	public Autor(@NotBlank String nome, @NotBlank String descricao, 
-			@NotBlank @Email String email) {
+				 @NotBlank @Email String email) {
 		
 		if(nome == null || nome.trim().equals(""))
 		{
