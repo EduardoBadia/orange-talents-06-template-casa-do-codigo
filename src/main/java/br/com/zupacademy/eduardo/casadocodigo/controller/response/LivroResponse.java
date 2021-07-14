@@ -24,7 +24,7 @@ public class LivroResponse {
 		return id;
 	}
 	
-	public static List<LivroResponse> converter(List<Livro> livros) {
+	public static List<LivroResponse> toResponse(List<Livro> livros) {
 		
 		return livros.stream().map(LivroResponse::new).collect(Collectors.toList());
 	}
