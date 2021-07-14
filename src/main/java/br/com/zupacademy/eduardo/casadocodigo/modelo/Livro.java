@@ -54,6 +54,11 @@ public class Livro {
 		this.categoria = categoria;
 		// TODO Auto-generated constructor stub
 	}
+	
+	public Long getId()
+	{
+		return id;
+	}
 
 	public String getTitulo() {
 		return titulo;
