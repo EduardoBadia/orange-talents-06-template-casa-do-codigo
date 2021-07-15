@@ -1,6 +1,6 @@
 package br.com.zupacademy.eduardo.casadocodigo.config.anotacao;
 
-import static java.lang.annotation.ElementType.FIELD;
+import static java.lang.annotation.ElementType.TYPE;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 import java.lang.annotation.Documented;
@@ -10,21 +10,17 @@ import java.lang.annotation.Target;
 import javax.validation.Constraint;
 import javax.validation.Payload;
 
-import br.com.zupacademy.eduardo.casadocodigo.config.validacao.UniqueValueValidator;
+import br.com.zupacademy.eduardo.casadocodigo.config.validacao.StateInCountryValidator;
 
 @Documented
-@Constraint(validatedBy = {UniqueValueValidator.class})
-@Target({FIELD})
+@Constraint(validatedBy = {StateInCountryValidator.class})
+@Target({TYPE})
 @Retention(RUNTIME)
-public @interface UniqueValue {
+public @interface StateInCountry {
         
-	String message() default "o valor não pode ser duplicado";
+	String message() default "O estado já foi registrado para o país";
 	
 	Class<?>[] groups() default {};
 	
 	Class<? extends Payload>[] payload() default {}; 
-	
-	String fieldName();
-	
-	Class<?> domainClass();
 }

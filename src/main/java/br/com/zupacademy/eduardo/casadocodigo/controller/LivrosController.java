@@ -52,7 +52,7 @@ public class LivrosController {
 	
 	@GetMapping("/{id}")
 	@Transactional
-	public ResponseEntity<?> ListarDetalheDoLivro(@PathVariable Long id) {
+	public ResponseEntity<?> ExibirDetalheDoLivro(@PathVariable Long id) {
 		
 		Optional<Livro> optional = livroRepository.findById(id);
 		if (optional.isPresent()) {

@@ -37,6 +37,4 @@ public class UniqueValueValidator implements ConstraintValidator<UniqueValue, Ob
 		
 		return list.isEmpty();
 	}
-
-	
 }
