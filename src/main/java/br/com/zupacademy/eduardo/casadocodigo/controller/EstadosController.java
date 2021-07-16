@@ -13,7 +13,7 @@ import br.com.zupacademy.eduardo.casadocodigo.controller.request.NovoEstadoReque
 import br.com.zupacademy.eduardo.casadocodigo.modelo.Estado;
 
 @RestController
-public class CriaEstadoController {
+public class EstadosController {
 
 	@Autowired
 	private EntityManager manager;

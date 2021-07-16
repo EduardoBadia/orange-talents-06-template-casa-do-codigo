@@ -13,7 +13,7 @@ public class NovoAutorRequest {
 	private String nome; 
 	@NotBlank
 	@Email
-	@UniqueValue(domainClass= Autor.class, fieldName= "email")
+	@UniqueValue(domainClass= Autor.class, fieldName= "email", message= "O email do autor não pode ser repetido")
 	private String email; 
 	@NotBlank
 	@Size(max = 400)

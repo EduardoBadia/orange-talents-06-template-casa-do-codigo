@@ -10,7 +10,6 @@ import javax.validation.ConstraintValidatorContext;
 
 import br.com.zupacademy.eduardo.casadocodigo.config.anotacao.StateInCountry;
 import br.com.zupacademy.eduardo.casadocodigo.controller.request.NovoEstadoRequest;
-import br.com.zupacademy.eduardo.casadocodigo.modelo.Estado;
 
 public class StateInCountryValidator implements ConstraintValidator<StateInCountry, NovoEstadoRequest>{
 	

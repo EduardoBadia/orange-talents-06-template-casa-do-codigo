@@ -25,8 +25,6 @@ public class NovoEstadoRequest {
 		return idPais;
 	}
 	
-	
-
 	public NovoEstadoRequest(@NotBlank String nome, @NotNull Long idPais) {
 		super();
 		this.nome = nome;

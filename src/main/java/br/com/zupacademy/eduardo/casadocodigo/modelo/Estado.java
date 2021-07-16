@@ -41,4 +41,6 @@ public class Estado {
 	public String toString() {
 		return "Estado [id=" + id + ", nome=" + nome + ", pais=" + pais + "]";
 	}
+	
+	
 }

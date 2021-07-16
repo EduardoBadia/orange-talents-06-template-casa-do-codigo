@@ -13,7 +13,7 @@ import br.com.zupacademy.eduardo.casadocodigo.controller.request.NovoPaisRequest
 import br.com.zupacademy.eduardo.casadocodigo.modelo.Pais;
 
 @RestController
-public class CriaPaisController {
+public class PaisesController {
 
 	@PersistenceContext
 	private EntityManager manager;
